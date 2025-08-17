@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crushed Glass Photo Print - Sparkling Photo Gift | TheCrystalPrintShop</title>
+    <meta name="description" content="Transform your cherished memories into stunning works of art with our signature crushed glass photo prints. Hand-embellished with premium crushed glass that catches and reflects light beautifully.">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Crushed Glass Photo Print - Sparkling Photo Gift | TheCrystalPrintShop">
+    <meta property="og:description" content="Transform your cherished memories into stunning works of art with our signature crushed glass photo prints.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    <meta property="og:url" content="https://thecrystalprintshop.etsy.com/product/1">
+    <meta property="og:type" content="product">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Additional styles for product detail page */
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--soft-gray);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--rose-gold);
+        }
+        
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .product-image-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .main-image {
+            aspect-ratio: 1;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100);
+        }
+        
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .main-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .product-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .product-badges {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-detail-title {
+            font-family: var(--font-serif);
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stars-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .star-rating {
+            display: flex;
+            color: var(--yellow-400);
+        }
+        
+        .star-rating i {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: currentColor;
+        }
+        
+        .review-text {
+            margin-left: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+        }
+        
+        .product-description {
+            color: var(--soft-gray);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        .price-section {
+            border-top: 1px solid var(--gray-200);
+            padding-top: 1.5rem;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .shipping-info {
+            display: flex;
+            align-items: center;
+            color: var(--green-600);
+            font-size: 0.875rem;
+            gap: 0.25rem;
+        }
+        
+        .tags-section {
+            border-top: 1px solid var(--gray-200);
+            padding-top: 1.5rem;
+        }
+        
+        .tags-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+        
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            background-color: var(--gray-100);
+            color: var(--charcoal);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+        }
+        
+        .action-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-top: 1.5rem;
+        }
+        
+        .btn-large {
+            font-size: 1.125rem;
+            padding: 1rem;
+        }
+        
+        .action-row {
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        .action-row .btn {
+            flex: 1;
+        }
+        
+        .shop-info-section {
+            border-top: 1px solid var(--gray-200);
+            padding-top: 1.5rem;
+        }
+        
+        .shop-info-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+        
+        .shop-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+        }
+        
+        .related-products-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 640px) {
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .related-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">
+                    <i data-lucide="gem" class="logo-icon"></i>
+                    Etsy
+                </a>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">Gifts</a>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search for anything" class="search-input">
+                <button class="search-button" aria-label="Search">
+                    <i data-lucide="search"></i>
+                </button>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-icon-btn" aria-label="Favorites">
+                    <i data-lucide="heart"></i>
+                </button>
+                <button class="nav-icon-btn" aria-label="Shopping cart">
+                    <i data-lucide="shopping-cart"></i>
+                </button>
+                <button class="nav-icon-btn" aria-label="User account">
+                    <i data-lucide="user"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div style="padding: 2rem 0;">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">← Back to shop</a>
+            </div>
+            
+            <!-- Product Detail -->
+            <div class="product-detail-grid">
+                <!-- Product Images -->
+                <div class="product-image-section">
+                    <div class="main-image">
+                        <img src="https://crystalprintshop.com/cdn/shop/files/79ABA614-0B5E-44C9-A855-F612C28A2C7E.jpg?v=1754954312&width=600" alt="Signature Sparkly Glitter Glass Photo Print - Wedding Gift">
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="product-info-section">
+                    <div>
+                        <div class="product-badges">
+                            <span class="badge badge-featured">Featured</span>
+                            <span class="badge" style="background: transparent; color: var(--charcoal); border: 1px solid var(--gray-300);">Wedding</span>
+                        </div>
+                        <h1 class="product-detail-title">Signature Sparkly Glitter Glass Photo Print - Wedding Gift</h1>
+                        <div class="rating-section">
+                            <div class="stars-container">
+                                <div class="star-rating">
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                    <i data-lucide="star"></i>
+                                </div>
+                                <span class="review-text">(39 reviews)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">Components of photo embellished with sparkling glass. Multiple frame options available. Hand-embellished with multiple blends of crushed European glass to enhance colors, highlights, and details. Each piece is signed by artist Dyana Klein for authenticity.</p>
+                    </div>
+                    
+                    <!-- Price and Shipping -->
+                    <div class="price-section">
+                        <div class="price-container">
+                            <div class="product-price">$89.00</div>
+                            <div class="shipping-info">
+                                <i data-lucide="truck"></i>
+                                FREE shipping
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="tags-section">
+                        <h3 class="tags-title">Tags</h3>
+                        <div class="tags-container">
+                            <span class="tag">wedding</span>
+                            <span class="tag">family</span>
+                            <span class="tag">sparkling</span>
+                            <span class="tag">gift</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="action-section">
+                        <button class="btn btn-primary btn-large">Add to Cart</button>
+                        <div class="action-row">
+                            <button class="btn btn-outline">
+                                <i data-lucide="heart"></i>
+                                Add to Favorites
+                            </button>
+                            <button class="btn btn-outline">
+                                <i data-lucide="share-2"></i>
+                                Share
+                            </button>
+                        </div>
+                        <button class="btn btn-accent btn-large">Request Custom Order</button>
+                    </div>
+                    
+                    <!-- Shop Info -->
+                    <div class="shop-info-section">
+                        <h3 class="shop-info-title">Shop Information</h3>
+                        <div class="shop-details">
+                            <p>From TheCrystalPrintShop in Carmel Valley, California</p>
+                            <p>Usually ships within 1-2 business days</p>
+                            <p>61 sales • 5.0 star rating • 39 reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="related-products-section">
+                <h2 class="section-title">
+                    <i data-lucide="sparkles" class="section-icon"></i>
+                    More from this shop
+                </h2>
+                <div class="related-grid" id="relatedProducts">
+                    <!-- Related products will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Gift cards</a></li>
+                        <li><a href="#" class="footer-link">Etsy Registry</a></li>
+                        <li><a href="#" class="footer-link">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Sell</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Sell on Etsy</a></li>
+                        <li><a href="#" class="footer-link">Teams</a></li>
+                        <li><a href="#" class="footer-link">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Etsy, Inc.</a></li>
+                        <li><a href="#" class="footer-link">Policies</a></li>
+                        <li><a href="#" class="footer-link">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help Centre</a></li>
+                        <li><a href="#" class="footer-link">Contact us</a></li>
+                        <li><a href="#" class="footer-link">Privacy settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Etsy, Inc.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <i data-lucide="bookmark-plus"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize icons
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+            loadRelatedProducts();
+        });
+        
+        // Related products data (subset from main products)
+        const relatedProducts = [
+            {
+                id: 2,
+                title: "DiamondLuxe Glass & Resin Mounted Print",
+                price: 189.00,
+                imageUrl: "https://crystalprintshop.com/cdn/shop/files/E64BE9EE-9137-4DA3-A56E-8169042BA24E.jpg?v=1754954312&width=400",
+                premium: true
+            },
+            {
+                id: 3,
+                title: "Full Color Sparkly Glitter Photo Art Print",
+                price: 79.00,
+                imageUrl: "https://crystalprintshop.com/cdn/shop/files/55FDB251-A5C7-4083-9B04-EA73CB0B99F7.jpg?v=1754954312&width=400",
+                featured: true
+            },
+            {
+                id: 4,
+                title: "B/W With Pop of Color Sparkly Photo",
+                price: 85.00,
+                imageUrl: "https://crystalprintshop.com/cdn/shop/files/283E5A09-0EFD-460F-9FE6-3E6A3B06C5C5.jpg?v=1754954312&width=400"
+            },
+            {
+                id: 5,
+                title: "Wedding Dress Sparkle Enhancement",
+                price: 95.00,
+                imageUrl: "https://crystalprintshop.com/cdn/shop/files/808B9C72-C8CC-4744-B3B2-C7E719D1B8E2.jpg?v=1754954312&width=400"
+            }
+        ];
+        
+        function loadRelatedProducts() {
+            const container = document.getElementById('relatedProducts');
+            container.innerHTML = '';
+            
+            relatedProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.onclick = () => window.location.href = `product-detail.html?id=${product.id}`;
+                
+                card.innerHTML = `
+                    <div class="product-image-container">
+                        <img src="${product.imageUrl}" alt="${product.title}" class="product-image">
+                        <div class="product-badges">
+                            ${product.featured ? '<span class="badge badge-featured">Featured</span>' : ''}
+                            ${product.premium ? '<span class="badge badge-premium">Premium</span>' : ''}
+                        </div>
+                        <button class="favorite-btn" onclick="event.stopPropagation(); console.log('Added to favorites')" aria-label="Add to favorites">
+                            <i data-lucide="heart"></i>
+                        </button>
+                        <div class="shipping-badge">
+                            <span class="badge badge-shipping">
+                                <i data-lucide="truck"></i>
+                                FREE shipping
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.title}</h3>
+                        <div class="product-footer">
+                            <span class="product-price">$${product.price.toFixed(2)}</span>
+                            <div class="product-rating">
+                                <i data-lucide="star" class="rating-star"></i>
+                                <span class="rating-count">(5)</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+            
+            // Re-initialize icons for the new cards
+            setTimeout(() => {
+                lucide.createIcons(container);
+            }, 0);
+        }
+        
+        // Add interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add to cart functionality
+            const addToCartBtn = document.querySelector('.btn-primary');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', function() {
+                    this.textContent = 'Added to Cart!';
+                    this.style.backgroundColor = 'var(--green-600)';
+                    setTimeout(() => {
+                        this.textContent = 'Add to Cart';
+                        this.style.backgroundColor = 'var(--charcoal)';
+                    }, 2000);
+                });
+            }
+            
+            // Favorite functionality
+            const favoriteBtn = document.querySelector('.btn-outline');
+            if (favoriteBtn && favoriteBtn.textContent.includes('Favorites')) {
+                favoriteBtn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    if (this.textContent.includes('Add to')) {
+                        this.innerHTML = '<i data-lucide="heart"></i> Added to Favorites';
+                        this.style.borderColor = 'var(--rose-gold)';
+                        this.style.color = 'var(--rose-gold)';
+                    } else {
+                        this.innerHTML = '<i data-lucide="heart"></i> Add to Favorites';
+                        this.style.borderColor = 'var(--gray-300)';
+                        this.style.color = 'var(--charcoal)';
+                    }
+                    lucide.createIcons(this);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
